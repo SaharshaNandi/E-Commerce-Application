@@ -1,0 +1,127 @@
+@import '../../index.scss';
+// *{
+//   width: 100%;
+// }
+
+.home-container {
+  width: 100%;
+  height: 42vw;
+
+  .sale {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1em;
+    margin: 0 0 1.8em 0;
+
+    @include mediaMd {
+      height: calc(400px + 16vw);
+    }
+
+    .title {
+      font-size: 2.6em;
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+      margin-top: 1.6em;
+
+      @include mediaMd {
+        font-size: 3.6em;
+      }
+    }
+
+    .subtitle {
+      max-width: 370px;
+
+      @include mediaMd {
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+$slides: 5;
+$slideAnimation: 4s;
+$totalAnimationTime: 20s;
+
+.slider {
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  // position: relative;
+
+  @include mediaMd {
+    height: calc(400px + 16vw);
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: anime 20s infinite;
+    opacity: 0;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .slide:nth-child(1) {
+    animation-delay: 16s;
+    color: #fff;
+  }
+
+  .slide:nth-child(2) {
+    animation-delay: 12s;
+    color: #fff;
+  }
+
+  .slide:nth-child(3) {
+    animation-delay: 8s;
+    color: #fff;
+  }
+
+  .slide:nth-child(4) {
+    animation-delay: 4s;
+    color: #fff;
+  }
+
+  .slide:nth-child(5) {
+    animation-delay: 0s;
+    color: #fff;
+  }
+
+  // .slide:nth-child(6) {
+  //   animation-delay: 0s;
+  //   color: #fff;
+  // }
+
+  .title {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    margin-top: 5em;
+  
+    @include mediaMd {
+      font-size: 3.6em;
+      margin-top: 5em;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1em;
+    max-width: 260px;
+  }
+}
+
+@keyframes anime {   
+  25%{
+    opacity:1;
+  }
+  40%{
+    opacity:0;
+  }
+} 

@@ -1,0 +1,18 @@
+@import '../../index.scss';
+
+.contact-container {
+  padding: 1.5em 0.5em;
+
+  .title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #06265e;
+    margin-top: .8em;
+  
+    @include mediaMd {
+      font-size: 1.2em;
+    }
+  }
+}
+
+
